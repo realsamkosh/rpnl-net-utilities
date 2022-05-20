@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace rpnl.net.utilities.ImageUtils
+namespace RPNL.Net.Utilities.ImageUtils
 {
     public class Base64Helper
     {

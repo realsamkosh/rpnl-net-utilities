@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{80394640-298E-4DA5-9A44-500ADE04DDDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rpnl.net.utilities", "rpnl.net.utilities\rpnl.net.utilities.csproj", "{E99F1D22-1BAD-4F48-BCBA-B0E9E5C86A90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPNL.Net.Utilities", "RPNL.Net.Utilities\RPNL.Net.Utilities.csproj", "{E99F1D22-1BAD-4F48-BCBA-B0E9E5C86A90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

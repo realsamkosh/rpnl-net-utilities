@@ -1,7 +1,8 @@
-﻿using rpnl.net.utilities.HashingUtil;
+﻿using RPNL.Net.Utilities.HashingUtil;
+using System;
 using System.Text;
 
-namespace rpnl.net.utilities.PasswordUtils
+namespace RPNL.Net.Utilities.PasswordUtils
 {
     public class PasswordGenerator
     {
@@ -44,7 +45,7 @@ namespace rpnl.net.utilities.PasswordUtils
         public static string CreateSpecRandomPassword(int length)
         {
             const string valid = "!@$?_-#";
-            StringBuilder res = new();
+            StringBuilder res = new StringBuilder();
             Random rnd = new();
             while (0 < length--)
             {

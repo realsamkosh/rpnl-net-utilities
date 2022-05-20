@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace rpnl.net.utilities.PhoneNumberUtils
+namespace RPNL.Net.Utilities.PhoneNumberUtils
 {
     public class PhoneNumberValidator
     {
@@ -20,7 +20,7 @@ namespace rpnl.net.utilities.PhoneNumberUtils
                 }
                 else
                 {
-                    PhoneNumberCheckViewModel result = new();
+                    PhoneNumberCheckViewModel result = new PhoneNumberCheckViewModel();
                     // Parse the number to check into a PhoneNumber object.
                     PhoneNumber phoneNumber = _phoneUtil.Parse(phonenumber, null);
                     result.Valid = _phoneUtil.IsValidNumber(phoneNumber);

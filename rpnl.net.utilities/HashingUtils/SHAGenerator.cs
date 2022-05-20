@@ -5,13 +5,13 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace rpnl.net.utilities.HashingUtil
+namespace RPNL.Net.Utilities.HashingUtil
 {
     public static class SHAGenerator
     {
         public static String sha256_hash(String value)
         {
-            StringBuilder Sb = new();
+            StringBuilder Sb = new StringBuilder();
 
             using (SHA256 hash = SHA256.Create())
             {

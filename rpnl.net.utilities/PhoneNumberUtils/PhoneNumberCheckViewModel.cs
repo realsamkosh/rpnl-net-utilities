@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace rpnl.net.utilities.PhoneNumberUtils
+namespace RPNL.Net.Utilities.PhoneNumberUtils
 {
     public class PhoneNumberCheckViewModel
     {

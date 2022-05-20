@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Vinebuk.Utilities.PasswordUtility
+namespace RPNL.Net.Utilities.PasswordUtils
 {
     public class PasswordPolicySettings
     {

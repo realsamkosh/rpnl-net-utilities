@@ -7,33 +7,35 @@
 		<Company>Right Pitch Nigeria</Company>
 		<RepositoryUrl>https://github.com/realsamkosh/rpnl-net-utilities</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<FileVersion>1.0.2</FileVersion>
+		<FileVersion>1.0.7</FileVersion>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Authors>Samuel Akosile</Authors>
 		<Description>
-			This is collection of useful .NET CORE Utilities
-
-			This version currently Support .NET5 and Above
-
-			Image Utils
-			Password Utils
-			PhoneNumber Utils
-			IdentityVerificationUtils i.e Metamap
-			Generic Response Utils
-			Permission Utils and so on.
+			This is collection of useful .NET CORE Utilities.This version currently Support .NET5 and Above
+            - Authenticaton Utils
+			- Image Utils
+			- Password Utils
+			- PhoneNumber Utils
+			- IdentityVerificationUtils i.e Metamap
+			- Generic Response Utils
+			- Web Utils i.e Bootstrap Notification
+			- Permission Utils and so on.
 		</Description>
 		<UserSecretsId>4b7cd68a-3576-43a0-b1b8-0d26ac8ecd1f</UserSecretsId>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<AnalysisLevel>5.0-minimum</AnalysisLevel>
 		<AssemblyVersion>1.0.1</AssemblyVersion>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>1.0.2</Version>
+		<Version>1.0.7</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="libphonenumber-csharp" Version="8.12.46" />
 		<PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Identity.Core" Version="6.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.5" />
 	</ItemGroup>
 
 </Project>

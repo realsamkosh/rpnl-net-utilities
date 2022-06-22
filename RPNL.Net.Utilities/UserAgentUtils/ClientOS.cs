@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace RPNL.Net.Utilities.UserAgent
+namespace RPNL.Net.Utilities.UserAgentUtils
 {
     public class ClientOS
     {
@@ -46,7 +46,7 @@ namespace RPNL.Net.Utilities.UserAgent
 
         public string Version { get; set; }
 
-        private static void NameVersionAction(Match match, Object obj)
+        private static void NameVersionAction(Match match, object obj)
         {
             ClientOS current = obj as ClientOS;
 
@@ -70,7 +70,7 @@ namespace RPNL.Net.Utilities.UserAgent
                     new Regex(@"(windows)\snt\s6\.2;\s(arm)",RegexOptions.IgnoreCase),// Windows RT
                     new Regex(@"(windows\sphone(?:\sos)*)[\s\/]?([\d\.\s]+\w)*",RegexOptions.IgnoreCase),// Windows Phone
                 },
-                Action = (Match match, Object obj)=>{
+                Action = (match, obj)=>{
                     ClientOS current = obj as ClientOS;
 
                     current.Name = new Regex(@"(^[a-zA-Z]+\s[a-zA-Z]+)",RegexOptions.IgnoreCase).Match(match.Value).Value;
@@ -87,7 +87,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"(windows\smobile|windows)[\s\/]?([ntce\d\.\s]+\w)",RegexOptions.IgnoreCase)
                 },
-                Action = (Match match, Object obj)=>{
+                Action = (match, obj)=>{
                     ClientOS current = obj as ClientOS;
 
                     current.Name = new Regex(@"(^[a-zA-Z]+)",RegexOptions.IgnoreCase).Match(match.Value).Value;
@@ -104,7 +104,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)",RegexOptions.IgnoreCase)
                 },
-                Action = (Match match, Object obj)=>{
+                Action = (match, obj)=>{
                     ClientOS current = obj as ClientOS;
 
                     var nameAndVersion = new string[]{match.Value.Substring(0,match.Value.IndexOf(" ")),match.Value.Substring(match.Value.IndexOf(" ")+1) };
@@ -120,7 +120,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"\((bb)(10);",RegexOptions.IgnoreCase)// BlackBerry 10
                 },
-                Action = (Match match, Object obj)=>{
+                Action = (match, obj)=>{
                     ClientOS current = obj as ClientOS;
 
                     current.Name = "BlackBerry";
@@ -141,7 +141,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"(symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]+)*",RegexOptions.IgnoreCase)// Symbian
                 },
-                Action = (Match match, Object obj)=>{
+                Action = (match, obj)=>{
                     ClientOS current = obj as ClientOS;
 
                     var nameAndVersion = new string[]{match.Value.Substring(0,match.Value.IndexOf(" ")),match.Value.Substring(match.Value.IndexOf(" ")+1) };
@@ -155,7 +155,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"\((series40);",RegexOptions.IgnoreCase)// Series 40
                 },
-                Action = (Match match, Object obj)=>{
+                Action = (match, obj)=>{
                     ClientOS current = obj as ClientOS;
 
                     current.Name = match.Value;
@@ -165,7 +165,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"mozilla.+\(mobile;.+gecko.+firefox",RegexOptions.IgnoreCase)// Firefox OS
                 },
-                Action = (Match match, Object obj)=>{
+                Action = (match, obj)=>{
                     ClientOS current = obj as ClientOS;
 
                     var nameAndVersion = new string[]{match.Value.Substring(0,match.Value.IndexOf(" ")),match.Value.Substring(match.Value.IndexOf(" ")+1) };
@@ -196,7 +196,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"(cros)\s[\w]+\s([\w\.]+\w)",RegexOptions.IgnoreCase)// Chromium OS
                 },
-                Action = (Match match, Object obj)=>{
+                Action = (match, obj)=>{
                     ClientOS current = obj as ClientOS;
 
                     var nameAndVersion = new string[]{match.Value.Substring(0,match.Value.IndexOf(" ")),match.Value.Substring(match.Value.IndexOf(" ")+1) };
@@ -210,7 +210,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"(sunos)\s?([\w\.]+\d)*",RegexOptions.IgnoreCase)// Solaris
                 },
-                Action = (Match match, Object obj)=>{
+                Action = (match, obj)=>{
                     ClientOS current = obj as ClientOS;
 
                     var nameAndVersion = new string[]{match.Value.Substring(0,match.Value.IndexOf(" ")),match.Value.Substring(match.Value.IndexOf(" ")+1) };
@@ -231,7 +231,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"(ip[honead]+)(?:.*os\s([\w]+)*\slike\smac|;\sopera)",RegexOptions.IgnoreCase)// iOS
                 },
-                Action = (Match match, Object obj)=>{
+                Action = (match, obj)=>{
                     ClientOS current = obj as ClientOS;
 
                     var nameAndVersion = new string[]{match.Value.Substring(0,match.Value.IndexOf(" ")),match.Value.Substring(match.Value.IndexOf(" ")+1) };
@@ -246,7 +246,7 @@ namespace RPNL.Net.Utilities.UserAgent
                     new Regex(@"(mac\sos\sx)\s?([\w\s\.]+\w)*",RegexOptions.IgnoreCase),
                     new Regex(@"(macintosh|mac(?=_powerpc)\s)",RegexOptions.IgnoreCase)// Mac OS
                 },
-                Action = (Match match, Object obj)=>{
+                Action = (match, obj)=>{
                     ClientOS current = obj as ClientOS;
 
                     var nameAndVersion = new string[]{match.Value.Substring(0,match.Value.IndexOf(" ")),match.Value.Substring(match.Value.IndexOf(" ")+1) };

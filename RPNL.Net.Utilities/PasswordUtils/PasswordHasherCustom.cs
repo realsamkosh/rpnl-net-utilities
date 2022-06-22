@@ -11,11 +11,11 @@ namespace RPNL.Net.Utilities.PasswordUtils
         private const int PBKDF2SubkeyLength = 256 / 8;
         private const int SaltSize = 128 / 8;
 
-        public string HashPassword(string password)
+        public static string HashPassword(string password)
         {
             if (password == null)
             {
-                throw new ArgumentNullException("password");
+                throw new ArgumentNullException(nameof(password));
             }
 
             // Produce a version 0 (see comment above) text hash.

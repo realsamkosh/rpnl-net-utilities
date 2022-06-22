@@ -1,4 +1,4 @@
-﻿namespace RPNL.Net.Utilities.IdentityVerificationUtils.Metamap.Models.NIN
+﻿namespace RPNL.Net.Utilities.IdentityVerficationUtils.Metamap.Models.NG.NIN
 {
     public class NextOfKin
     {

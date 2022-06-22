@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace RPNL.Net.Utilities.ValidationUtil
+namespace RPNL.Net.Utilities.ValidationUtils
 {
     public class ValidationHelpers
     {
@@ -16,18 +16,18 @@ namespace RPNL.Net.Utilities.ValidationUtil
             return Grade.Contains(_grade);
         }
 
-        public static Boolean ValidateNumericValue(String Value)
+        public static bool ValidateNumericValue(string Value)
         {
-            return Int32.TryParse(Value, out int number);
+            return int.TryParse(Value, out int number);
         }
 
-        public static Boolean ValidateDecimalValue(String Value)
+        public static bool ValidateDecimalValue(string Value)
         {
-            return Decimal.TryParse(Value, out decimal number);
+            return decimal.TryParse(Value, out decimal number);
         }
 
-        public bool IsAlphaNumeric(string input) => Regex.IsMatch(input, "^[a-zA-Z0-9 ]+$");
-        public bool IsAlphabetsOnly(string input) => Regex.IsMatch(input, "^[a-zA-Z ]+$");
-        public bool IsNumberOnly(string input) => Regex.IsMatch(input, "^[0-9]*$");
+        public static bool IsAlphaNumeric(string input) => Regex.IsMatch(input, "^[a-zA-Z0-9 ]+$");
+        public static bool IsAlphabetsOnly(string input) => Regex.IsMatch(input, "^[a-zA-Z ]+$");
+        public static bool IsNumberOnly(string input) => Regex.IsMatch(input, "^[0-9]*$");
     }
 }

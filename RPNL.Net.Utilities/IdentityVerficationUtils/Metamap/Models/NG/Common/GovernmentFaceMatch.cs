@@ -1,4 +1,4 @@
-﻿namespace RPNL.Net.Utilities.IdentityVerificationUtils.Metamap.Models.Common
+﻿namespace RPNL.Net.Utilities.IdentityVerficationUtils.Metamap.Models.NG.Common
 {
     public class GovernmentFaceMatch
     {

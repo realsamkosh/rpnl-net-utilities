@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Linq;
 
-namespace RPNL.Net.Utilities.PermissionUtil
+namespace RPNL.Net.Utilities.PermissionUtils
 {
     public static class PermissionChecker
     {

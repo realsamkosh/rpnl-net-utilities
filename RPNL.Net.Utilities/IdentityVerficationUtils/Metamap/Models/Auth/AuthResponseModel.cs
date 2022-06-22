@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RPNL.Net.Utilities.IdentityVerificationUtils.Metamap.Models.Auth
+namespace RPNL.Net.Utilities.IdentityVerficationUtils.Metamap.Models.Auth
 {
     public class AuthResponseModel
     {

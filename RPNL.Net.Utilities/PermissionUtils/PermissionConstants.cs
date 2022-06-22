@@ -1,4 +1,4 @@
-﻿namespace RPNL.Net.Utilities.PermissionUtil
+﻿namespace RPNL.Net.Utilities.PermissionUtils
 {
     public static class PermissionConstants
     {

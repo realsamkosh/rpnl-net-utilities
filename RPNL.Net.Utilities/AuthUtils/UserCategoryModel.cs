@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RPNL.Net.Utilities.AuthUtil
+namespace RPNL.Net.Utilities.AuthUtils
 {
     public static class UserCategoryModel
     {
-        public static string Global = "G";
-        public static string AdminUsers = "A";
-        public static string Patient = "P";
-        public static string Student = "S";
-        public static string Members = "M";
-        public static string Employees = "E";
+        public const string Global = "G";
+        public const string AdminUsers = "A";
+        public const string Patient = "P";
+        public const string Student = "S";
+        public const string Members = "M";
+        public const string Employees = "E";
     }
 }

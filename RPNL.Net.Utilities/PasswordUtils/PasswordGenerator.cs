@@ -1,4 +1,4 @@
-﻿using RPNL.Net.Utilities.HashingUtil;
+﻿using RPNL.Net.Utilities.HashingUtils;
 using System;
 using System.Text;
 
@@ -64,8 +64,8 @@ namespace RPNL.Net.Utilities.PasswordUtils
                 string passc1 = CreateSpecRandomPassword(1);
                 //string pass = BitConverter.ToString(new SHA512CryptoServiceProvider().ComputeHash(Encoding.Default.GetBytes(passcode))).Replace("-", LowerCaseTrue1);
                 string pass = SHAGenerator.CreateSHA512(passcode).Replace("-", LowerCaseTrue1);
-                var password = pass.Substring(0, passwordLength) + passc1 + UpperCaseTrue1;
-                StringBuilder res = new StringBuilder();
+                var password = string.Concat(pass.AsSpan(0, passwordLength), passc1, UpperCaseTrue1);
+                StringBuilder res = new();
                 res.Append(password);
                 return res.ToString();
             }
@@ -76,7 +76,7 @@ namespace RPNL.Net.Utilities.PasswordUtils
                 string passc2 = CreateSpecRandomPassword(1);
                 //string pass = BitConverter.ToString(new SHA512CryptoServiceProvider().ComputeHash(Encoding.Default.GetBytes(passcode))).Replace("-", NumericTrue2);
                 string pass = SHAGenerator.CreateSHA512(passcode).Replace("-", NumericTrue2);
-                var password = pass.Substring(0, passwordLength) + passc2;
+                var password = string.Concat(pass.AsSpan(0, passwordLength), passc2);
                 StringBuilder res = new StringBuilder();
                 res.Append(password);
                 return res.ToString();
@@ -89,7 +89,7 @@ namespace RPNL.Net.Utilities.PasswordUtils
                 string passc3 = CreateSpecRandomPassword(1);
                 //string pass = BitConverter.ToString(new SHA512CryptoServiceProvider().ComputeHash(Encoding.Default.GetBytes(passcode))).Replace("-", NumericTrue3);
                 string pass = SHAGenerator.CreateSHA512(passcode).Replace("-", NumericTrue3);
-                var password = pass.Substring(0, passwordLength) + passc3 + UpperTrue3;
+                var password = string.Concat(pass.AsSpan(0, passwordLength), passc3, UpperTrue3);
                 StringBuilder res = new StringBuilder();
                 res.Append(password);
                 return res.ToString();
@@ -120,7 +120,7 @@ namespace RPNL.Net.Utilities.PasswordUtils
             string passc5 = CreateSpecRandomPassword(1);
             //string pass5 = BitConverter.ToString(new SHA512CryptoServiceProvider().ComputeHash(Encoding.Default.GetBytes(passcode5))).Replace("-", LowerCaseTrue5);
             string pass5 = SHAGenerator.CreateSHA512(LowerCaseTrue5);
-            var password5 = pass5.Substring(0, passwordLength) + passc5 + UpperCaseTrue5;
+            var password5 = string.Concat(pass5.AsSpan(0, passwordLength), passc5, UpperCaseTrue5);
             StringBuilder res5 = new StringBuilder();
             res5.Append(password5);
             return res5.ToString();

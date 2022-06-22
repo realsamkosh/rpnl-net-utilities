@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RPNL.Net.Utilities.IdentityVerificationUtils.Metamap.Models
+namespace RPNL.Net.Utilities.IdentityVerficationUtils.Metamap.Models
 {
     public class BaseResponseModel<TData>
     {

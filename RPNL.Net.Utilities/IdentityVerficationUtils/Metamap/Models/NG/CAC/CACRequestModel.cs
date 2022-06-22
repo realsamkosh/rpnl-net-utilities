@@ -1,4 +1,4 @@
-﻿namespace RPNL.Net.Utilities.IdentityVerificationUtils.Metamap.Models.CAC
+﻿namespace RPNL.Net.Utilities.IdentityVerficationUtils.Metamap.Models.NG.CAC
 {
     public class CACRequestModel
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RPNL.Net.Utilities.ValidationUtil
+namespace RPNL.Net.Utilities.ValidationUtils
 {
     public class ValidationMessages
     {

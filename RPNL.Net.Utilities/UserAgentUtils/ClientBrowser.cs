@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-namespace RPNL.Net.Utilities.UserAgent
+namespace RPNL.Net.Utilities.UserAgentUtils
 {
     public class ClientBrowser
     {
@@ -31,7 +31,7 @@ namespace RPNL.Net.Utilities.UserAgent
 
                         matchItem.Action(match, this);
 
-                        this.Major = new Regex(@"\d*").Match(this.Version).Value;
+                        Major = new Regex(@"\d*").Match(Version).Value;
 
                         return;
                     }
@@ -46,7 +46,7 @@ namespace RPNL.Net.Utilities.UserAgent
         public string Version { get; set; }
 
 
-        private static void NameVersionAction(Match match, Object obj)
+        private static void NameVersionAction(Match match, object obj)
         {
             ClientBrowser current = obj as ClientBrowser;
 
@@ -71,7 +71,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"(opios)[\/\s]+([\w\.]+)",RegexOptions.IgnoreCase)// Opera mini on iphone >= 8.0
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     var nameAndVersion = match.Value.Split('/');
@@ -84,7 +84,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"\s(opr)\/([\w\.]+)",RegexOptions.IgnoreCase)// Opera Webkit
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     var nameAndVersion = match.Value.Split('/');
@@ -110,7 +110,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"(trident).+rv[:\s]([\w\.]+).+like\sgecko",RegexOptions.IgnoreCase)// IE11
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     current.Name = "IE";
@@ -127,7 +127,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"(yabrowser)\/([\w\.]+)",RegexOptions.IgnoreCase)// Yandex
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     var nameAndVersion = match.Value.Split('/');
@@ -140,7 +140,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"(comodo_dragon)\/([\w\.]+)",RegexOptions.IgnoreCase)// Comodo Dragon
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     var nameAndVersion = match.Value.Split('/');
@@ -153,7 +153,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"(micromessenger)\/([\w\.]+)",RegexOptions.IgnoreCase)// WeChat
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     var nameAndVersion = match.Value.Split('/');
@@ -166,7 +166,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"xiaomi\/miuibrowser\/([\w\.]+)",RegexOptions.IgnoreCase)// MIUI Browser
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     var nameAndVersion = match.Value.Split('/');
@@ -179,7 +179,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"\swv\).+(chrome)\/([\w\.]+)",RegexOptions.IgnoreCase)// Chrome WebView
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     var nameAndVersion = match.Value.Split('/');
@@ -193,7 +193,7 @@ namespace RPNL.Net.Utilities.UserAgent
                     new Regex(@"android.+samsungbrowser\/([\w\.]+)",RegexOptions.IgnoreCase),
                     new Regex(@"android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)*",RegexOptions.IgnoreCase)// Android Browser
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     var nameAndVersion = match.Value.Split('/');
@@ -215,7 +215,7 @@ namespace RPNL.Net.Utilities.UserAgent
                     new Regex(@"ucweb.+(ucbrowser)[\/\s]?([\w\.]+)",RegexOptions.IgnoreCase),
                     new Regex(@"juc.+(ucweb)[\/\s]?([\w\.]+)",RegexOptions.IgnoreCase),// UCBrowser
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     var nameAndVersion = match.Value.Split('/');
@@ -228,7 +228,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"(dolfin)\/([\w\.]+)",RegexOptions.IgnoreCase)// Dolphin
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     var nameAndVersion = match.Value.Split('/');
@@ -241,7 +241,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"((?:android.+)crmo|crios)\/([\w\.]+)",RegexOptions.IgnoreCase)// Chrome for Android/iOS
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     var nameAndVersion = match.Value.Split('/');
@@ -254,7 +254,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@";fbav\/([\w\.]+);",RegexOptions.IgnoreCase)// Facebook App for iOS
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     var nameAndVersion = match.Value.Split('/');
@@ -267,7 +267,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"fxios\/([\w\.-]+)",RegexOptions.IgnoreCase)// Firefox for iOS
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     var nameAndVersion = match.Value.Split('/');
@@ -280,7 +280,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"version\/([\w\.]+).+?mobile\/\w+\s(safari)",RegexOptions.IgnoreCase)// Mobile Safari
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     var nameAndVersion = match.Value.Split('/');
@@ -293,7 +293,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"version\/([\w\.]+).+?(mobile\s?safari|safari)",RegexOptions.IgnoreCase)// Safari & Safari Mobile
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     var nameAndVersion = match.Value.Split('/');
@@ -306,7 +306,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"webkit.+?(mobile\s?safari|safari)(\/[\w\.]+)",RegexOptions.IgnoreCase)// Safari < 3.0
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     var nameAndVersion = match.Value.Split('/');
@@ -329,7 +329,7 @@ namespace RPNL.Net.Utilities.UserAgent
                 Regexes = new List<Regex>{
                     new Regex(@"(navigator|netscape)\/([\w\.-]+)",RegexOptions.IgnoreCase)// Netscape
                 },
-                Action = (Match match,Object obj) =>{
+                Action = (match,obj) =>{
                     ClientBrowser current = obj as ClientBrowser;
 
                     var nameAndVersion = match.Value.Split('/');

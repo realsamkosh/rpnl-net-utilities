@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace RPNL.Net.Utilities.ResponseUtil
@@ -69,8 +70,22 @@ namespace RPNL.Net.Utilities.ResponseUtil
     {
         Successful = 200,
         Failed = 400,
+        UnAuthorized = 401,
         ServerError = 500,
         ValidDataRequired = 3,
         DataNotFound = 4
+    }
+    public class SnakeCaseNamingPolicy : JsonNamingPolicy
+    {
+        public override string ConvertName(string name) => name.ToUnderscoreCase();
+    };
+
+
+    public static class StringExtensionMethod
+    {
+        public static string ToUnderscoreCase(this string str)
+        {
+            return string.Concat(str.Select((x, i) => i > 0 && char.IsUpper(x) ? "_" + x.ToString() : x.ToString())).ToLower();
+        }
     }
 }

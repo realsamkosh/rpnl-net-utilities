@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RPNL.Net.Utilities.AuthUtil
+namespace RPNL.Net.Utilities.AuthUtils
 {
     public class AuthenticationSettings
     {

@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace RPNL.Net.Utilities.AuthUtil
+namespace RPNL.Net.Utilities.AuthUtils
 {
     public class EmailAsPasswordValidator<TUser> : EmailAsPasswordValidator<TUser, string> where TUser : IdentityUser<string>
     { }

@@ -1,6 +1,6 @@
-﻿using RPNL.Net.Utilities.IdentityVerificationUtils.Metamap.Models.Common;
+﻿using RPNL.Net.Utilities.IdentityVerficationUtils.Metamap.Models.NG.Common;
 
-namespace RPNL.Net.Utilities.IdentityVerificationUtils.Metamap.Models.DriverLicense
+namespace RPNL.Net.Utilities.IdentityVerficationUtils.Metamap.Models.NG.DriverLicense
 {
     public class DriverLicenseResponseModel
     {

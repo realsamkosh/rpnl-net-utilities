@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 
-namespace RPNL.Net.Utilities.PermissionUtil
+namespace RPNL.Net.Utilities.PermissionUtils
 {
     public class PermissionDisplay
     {

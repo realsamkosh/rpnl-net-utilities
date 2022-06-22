@@ -1,5 +1,4 @@
-﻿using RPNL.Net.Utilities.PermissionUtil;
-using System.Linq;
+﻿using System.Linq;
 using System.Security.Claims;
 
 namespace RPNL.Net.Utilities.PermissionUtils

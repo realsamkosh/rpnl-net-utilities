@@ -5,20 +5,20 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RPNL.Net.Utilities.HashingUtil
+namespace RPNL.Net.Utilities.HashingUtils
 {
     public static class SHAGenerator
     {
-        public static String sha256_hash(String value)
+        public static string sha256_hash(string value)
         {
             StringBuilder Sb = new StringBuilder();
 
             using (SHA256 hash = SHA256.Create())
             {
                 Encoding enc = Encoding.UTF8;
-                Byte[] result = hash.ComputeHash(enc.GetBytes(value));
+                byte[] result = hash.ComputeHash(enc.GetBytes(value));
 
-                foreach (Byte b in result)
+                foreach (byte b in result)
                     Sb.Append(b.ToString("x2"));
             }
             return Sb.ToString();
@@ -34,7 +34,7 @@ namespace RPNL.Net.Utilities.HashingUtil
                 var hashValue = alg.ComputeHash(message);
                 foreach (byte x in hashValue)
                 {
-                    hex += String.Format("{0:x2}", x);
+                    hex += string.Format("{0:x2}", x);
                 }
                 return hex;
             }

@@ -49,7 +49,7 @@ namespace RPNL.Net.Utilities.WebUtils
             }
             catch (IndexOutOfRangeException e)
             {
-                ArgumentException exception = new ArgumentException("Key is invalid", "notificationType", e);
+                ArgumentException exception = new ArgumentException("Key is invalid", nameof(notificationType), e);
                 throw exception;
             }
         }

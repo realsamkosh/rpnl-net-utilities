@@ -1,4 +1,4 @@
-﻿namespace RPNL.Net.Utilities.UserAgent
+﻿namespace RPNL.Net.Utilities.UserAgentUtils
 {
     public class UserAgentModel
     {

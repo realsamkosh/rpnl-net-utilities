@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace RPNL.Net.Utilities.PermissionUtil
+namespace RPNL.Net.Utilities.PermissionUtils
 {
     public static class PermissionPackers
     {
@@ -17,14 +17,14 @@ namespace RPNL.Net.Utilities.PermissionUtil
                 throw new ArgumentNullException(nameof(packedPermissions));
             foreach (var character in packedPermissions)
             {
-                yield return ((PermissionsEnum)character);
+                yield return (PermissionsEnum)character;
             }
         }
 
         public static PermissionsEnum? FindPermissionViaName(this string permissionName)
         {
             return Enum.TryParse(permissionName, out PermissionsEnum permission)
-                ? (PermissionsEnum?)permission
+                ? permission
                 : null;
         }
     }

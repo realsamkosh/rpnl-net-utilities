@@ -1,4 +1,4 @@
-﻿namespace RPNL.Net.Utilities.IdentityVerificationUtils.Metamap.Models.TIN
+﻿namespace RPNL.Net.Utilities.IdentityVerficationUtils.Metamap.Models.NG.TIN
 {
     public class TINRequestModel
     {

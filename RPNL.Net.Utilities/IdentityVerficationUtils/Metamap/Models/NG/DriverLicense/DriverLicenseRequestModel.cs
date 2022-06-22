@@ -1,4 +1,4 @@
-﻿namespace RPNL.Net.Utilities.IdentityVerificationUtils.Metamap.Models.DriverLicense
+﻿namespace RPNL.Net.Utilities.IdentityVerficationUtils.Metamap.Models.NG.DriverLicense
 {
     public class DriverLicenseRequestModel
     {

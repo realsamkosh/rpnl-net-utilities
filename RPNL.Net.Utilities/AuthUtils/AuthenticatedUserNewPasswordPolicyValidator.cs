@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace RPNL.Net.Utilities.AuthUtil
+namespace RPNL.Net.Utilities.AuthUtils
 {
     public class AuthenticatedUsernewpasswordPolicyValidator
     {
@@ -15,11 +15,11 @@ namespace RPNL.Net.Utilities.AuthUtil
         /// <param name="verificationResult">The Result of Password Verification</param>
         /// <param name="email">The email of the authenticated user</param>
         /// <returns></returns>
-        public static List<string> ValidatePasswordPolicy(string newpassword, PasswordOptions passwrule, 
-                                                          string username, PasswordVerificationResult verificationResult,string email)
+        public static List<string> ValidatePasswordPolicy(string newpassword, PasswordOptions passwrule,
+                                                          string username, PasswordVerificationResult verificationResult, string email)
         {
             List<string> result = new List<string>();
-                
+
             //Default 
             if (newpassword == username)
             {

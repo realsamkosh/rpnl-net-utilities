@@ -12,7 +12,7 @@
 		<Authors>Samuel Akosile</Authors>
 		<Description>
 			This is collection of useful .NET CORE Utilities.This version currently Support .NET5 and Above
-            - Authenticaton Utils
+			- Authenticaton Utils
 			- Image Utils
 			- Password Utils
 			- PhoneNumber Utils
@@ -20,6 +20,8 @@
 			- Generic Response Utils
 			- Currency Utils
 			- Enum Utils
+			- Mail Utils
+			- Date Utils
 			- Web Utils i.e Bootstrap Notification
 			- Permission Utils and so on.
 		</Description>
@@ -28,16 +30,14 @@
 		<AnalysisLevel>5.0-minimum</AnalysisLevel>
 		<AssemblyVersion>1.0.1</AssemblyVersion>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>1.1.1</Version>
+		<Version>1.1.3</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="FluentValidation" Version="11.0.1" />
 		<PackageReference Include="libphonenumber-csharp" Version="8.12.46" />
-		<PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.5" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Identity.Core" Version="6.0.5" />
 		<PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.5" />
 	</ItemGroup>
 

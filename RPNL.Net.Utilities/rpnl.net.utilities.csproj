@@ -12,25 +12,16 @@
 		<Authors>Samuel Akosile</Authors>
 		<Description>
 			This is collection of useful .NET CORE Utilities.This version currently Support .NET5 and Above
-			- Authenticaton Utils
-			- Image Utils
-			- Password Utils
-			- PhoneNumber Utils
-			- IdentityVerificationUtils i.e Metamap
-			- Generic Response Utils
-			- Currency Utils
-			- Enum Utils
-			- Mail Utils
-			- Date Utils
-			- Web Utils i.e Bootstrap Notification
-			- Permission Utils and so on.
+			Authenticaton Utils, Image Utils, Password Utils, PhoneNumber Utils, IdentityVerificationUtils i.e Metamap
+			Generic Response Utils, Currency Utils, Enum Utils,Mail Utils,Date Utils,Web Utils i.e Bootstrap Notification
+			Permission Utils and so on.
 		</Description>
 		<UserSecretsId>4b7cd68a-3576-43a0-b1b8-0d26ac8ecd1f</UserSecretsId>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<AnalysisLevel>5.0-minimum</AnalysisLevel>
 		<AssemblyVersion>1.0.1</AssemblyVersion>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>1.2.0</Version>
+		<Version>1.2.3</Version>
 	</PropertyGroup>
 
 	<ItemGroup>

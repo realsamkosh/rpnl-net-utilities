@@ -10,7 +10,6 @@ namespace RPNL.Net.Utilities.ResponseUtil
     {
         public int Page { get; set; }
         public int PageSize { get; set; }
-        public int RecordsTotal { get; set; }
         public int Skip
         {
             get

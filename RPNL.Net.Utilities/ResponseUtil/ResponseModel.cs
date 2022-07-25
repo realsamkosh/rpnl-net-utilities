@@ -20,7 +20,7 @@ namespace RPNL.Net.Utilities.ResponseUtil
                 code = errorCodes,
                 data = data,
                 message = message,
-                success = errorCodes == ErrorCodes.Successful ? true : false
+                success = errorCodes == ErrorCodes.Successful
             };
         }
         public static ResponseModel Failed(string message, object data)
@@ -64,6 +64,7 @@ namespace RPNL.Net.Utilities.ResponseUtil
         public TData data { get; set; }
         public string message { get; set; }
         public ErrorCodes code { get; set; }
+        public TablePaginator paginator { get; set; }
         public bool success { get; set; }
     }
     public enum ErrorCodes
@@ -72,6 +73,7 @@ namespace RPNL.Net.Utilities.ResponseUtil
         Failed = 400,
         UnAuthorized = 401,
         ServerError = 500,
+        LinkExpired = 600,
         ValidDataRequired = 3,
         DataNotFound = 4
     }

@@ -21,7 +21,7 @@
 		<AnalysisLevel>5.0-minimum</AnalysisLevel>
 		<AssemblyVersion>1.0.1</AssemblyVersion>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>1.2.3</Version>
+		<Version>1.2.5</Version>
 	</PropertyGroup>
 
 	<ItemGroup>

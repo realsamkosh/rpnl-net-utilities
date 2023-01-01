@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPNL.Net.Utilities.ResponseUtil
 {
+    [Obsolete("This Method will be removed in future")]
     public class TablePaginator
     {
         public int Page { get; set; }

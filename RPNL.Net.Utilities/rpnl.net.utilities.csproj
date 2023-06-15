@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
 	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
 		<TargetFramework>net6.0</TargetFramework>
-		<TargetFramework>net5.0</TargetFramework>
 		<Nullable>disable</Nullable>
 		<Company>Right Pitch Nigeria</Company>
 		<RepositoryUrl>https://github.com/realsamkosh/rpnl-net-utilities</RepositoryUrl>
@@ -11,7 +10,7 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Authors>Samuel Akosile</Authors>
 		<Description>
-			This is collection of useful .NET CORE Utilities.This version currently Support .NET5 and Above
+			This is collection of useful .NET CORE Utilities.This version currently Support .NET6 and Above
 			Authenticaton Utils, Image Utils, Password Utils, PhoneNumber Utils, IdentityVerificationUtils i.e Metamap
 			Generic Response Utils, Currency Utils, Enum Utils,Mail Utils,Date Utils,Web Utils i.e Bootstrap Notification
 			Permission Utils and so on.
@@ -21,15 +20,14 @@
 		<AnalysisLevel>5.0-minimum</AnalysisLevel>
 		<AssemblyVersion>1.0.1</AssemblyVersion>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>1.2.5</Version>
+		<Version>1.3.5</Version>
 	</PropertyGroup>
-
 	<ItemGroup>
-		<PackageReference Include="FluentValidation" Version="11.1.0" />
-		<PackageReference Include="libphonenumber-csharp" Version="8.12.52" />
+		<PackageReference Include="FluentValidation" Version="11.5.2" />
+		<PackageReference Include="libphonenumber-csharp" Version="8.13.14" />
+		<PackageReference Include="Microsoft.AspNetCore.Authorization" Version="7.0.7" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.7" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="7.0.7" />
 	</ItemGroup>
-
 </Project>

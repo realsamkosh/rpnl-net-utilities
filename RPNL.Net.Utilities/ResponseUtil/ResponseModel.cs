@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace RPNL.Net.Utilities.ResponseUtil
 {
@@ -64,7 +60,6 @@ namespace RPNL.Net.Utilities.ResponseUtil
         public TData data { get; set; }
         public string message { get; set; }
         public ErrorCodes code { get; set; }
-        public TablePaginator paginator { get; set; }
         public bool success { get; set; }
     }
     public enum ErrorCodes
@@ -72,6 +67,7 @@ namespace RPNL.Net.Utilities.ResponseUtil
         Successful = 200,
         Failed = 400,
         UnAuthorized = 401,
+        TokenExpired = 406,
         ServerError = 500,
         LinkExpired = 600,
         ValidDataRequired = 3,

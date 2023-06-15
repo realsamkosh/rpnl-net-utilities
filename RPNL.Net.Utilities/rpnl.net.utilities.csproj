@@ -21,7 +21,11 @@
 		<AssemblyVersion>1.0.1</AssemblyVersion>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Version>1.3.5</Version>
+		<ApplicationIcon>rpnl-icon.png</ApplicationIcon>
 	</PropertyGroup>
+	<ItemGroup>
+	  <Content Include="rpnl-icon.png" />
+	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="FluentValidation" Version="11.5.2" />
 		<PackageReference Include="libphonenumber-csharp" Version="8.13.14" />

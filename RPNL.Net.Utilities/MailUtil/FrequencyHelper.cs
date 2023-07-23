@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConetWork.Utilities.MailUtility
+namespace RPNL.Net.Utilities.MailUtil
 {
     public class FrequencyHelper
     {

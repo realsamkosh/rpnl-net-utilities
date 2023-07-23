@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{80394640-298
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPNL.Net.Utilities", "RPNL.Net.Utilities\RPNL.Net.Utilities.csproj", "{E99F1D22-1BAD-4F48-BCBA-B0E9E5C86A90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPNL.Net.Web", "RPNL.Net.Web\RPNL.Net.Web.csproj", "{7C999290-5197-42AF-B8DB-A3B8E160B883}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +19,17 @@ Global
 		{E99F1D22-1BAD-4F48-BCBA-B0E9E5C86A90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E99F1D22-1BAD-4F48-BCBA-B0E9E5C86A90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E99F1D22-1BAD-4F48-BCBA-B0E9E5C86A90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C999290-5197-42AF-B8DB-A3B8E160B883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C999290-5197-42AF-B8DB-A3B8E160B883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C999290-5197-42AF-B8DB-A3B8E160B883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C999290-5197-42AF-B8DB-A3B8E160B883}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E99F1D22-1BAD-4F48-BCBA-B0E9E5C86A90} = {80394640-298E-4DA5-9A44-500ADE04DDDF}
+		{7C999290-5197-42AF-B8DB-A3B8E160B883} = {80394640-298E-4DA5-9A44-500ADE04DDDF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {458532EA-7FD0-4D96-80B5-EBAE3D774AC1}

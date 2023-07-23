@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RPNL.Net.Utilities.DbContextExtension.Interface
+{
+    public interface IDateAudit
+    {
+        DateTime CreatedDate { get; set; }
+
+        DateTime? LastModified { get; set; }
+    }
+}
